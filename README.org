@@ -568,14 +568,7 @@ several things to notice.
   data(diamonds)
   dsmall <-diamonds[sample(nrow(diamonds), 100), ] 
   p <- qplot(carat, price, data = dsmall)
-  
-  plot.rrg <- function(...) roundrectGrob(gp = gpar(fill = "skyblue1", col = NA),
-                                          r = unit(0.06, "npc"))
-  
-  panel.rrg <- function(...) roundrectGrob(gp = gpar(fill = "grey80", col = NA),
-                                          r = unit(0.06, "npc"))
-  
-  p + opts(plot.background = plot.rrg) + opts(panel.background = panel.rrg)
+  p
   
 #+end_src
 
